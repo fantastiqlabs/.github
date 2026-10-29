@@ -1,11 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
-  <title id="title">Fantastiq Labs avatar</title>
-  <desc id="desc">A warm red spark with a chartreuse center on a deep charcoal field.</desc>
-  <rect width="1024" height="1024" rx="196" fill="#202321"/>
-  <circle cx="512" cy="512" r="424" fill="none" stroke="#3B403B" stroke-width="4"/>
-  <circle cx="512" cy="512" r="390" fill="none" stroke="#343934" stroke-width="2" stroke-dasharray="3 17"/>
-  <path d="M512 154 602 416 840 266 690 504 954 512 690 602 840 840 602 690 512 954 422 690 184 840 334 602 70 512 334 422 184 184 422 334Z" fill="#D75236" stroke="#202321" stroke-width="13" stroke-linejoin="round"/>
-  <circle cx="512" cy="512" r="104" fill="#202321" stroke="#D9F06A" stroke-width="17"/>
-  <circle cx="512" cy="512" r="36" fill="#D9F06A"/>
-  <path d="M512 90v24M512 910v24M90 512h24M910 512h24" fill="none" stroke="#D9F06A" stroke-width="10" stroke-linecap="square"/>
+  <title id="title">Fantastiq Labs</title>
+  <desc id="desc">A gradient F and a small star on a transparent background.</desc>
+  <defs>
+    <linearGradient id="mark" x1="260" y1="190" x2="780" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B7CF7"/>
+      <stop offset=".35" stop-color="#74B5E8"/>
+      <stop offset=".58" stop-color="#54D5D0"/>
+      <stop offset="1" stop-color="#EE61B8"/>
+    </linearGradient>
+    <path id="f-mark" d="M360 190h340a50 50 0 0 1 0 100H360v175h285a50 50 0 0 1 0 100H360v205a50 50 0 0 1-100 0V290a100 100 0 0 1 100-100Z"/>
+    <path id="spark" d="m790 188 22 58 59 22-59 22-22 60-22-60-60-22 60-22z"/>
+  </defs>
+  <use href="#f-mark" fill="none" stroke="#17203D" stroke-width="34" stroke-linejoin="round"/>
+  <use href="#f-mark" fill="none" stroke="#F5F2FF" stroke-width="19" stroke-linejoin="round"/>
+  <use href="#f-mark" fill="url(#mark)"/>
+  <path d="M724 276c35-78 116-96 168-42 30 31 25 75 1 106-31 40-93 44-149 8" fill="none" stroke="#17203D" stroke-width="19" stroke-linecap="round"/>
+  <path d="M724 276c35-78 116-96 168-42 30 31 25 75 1 106-31 40-93 44-149 8" fill="none" stroke="#F5F2FF" stroke-width="9" stroke-linecap="round"/>
+  <use href="#spark" fill="#17203D" stroke="#17203D" stroke-width="18" stroke-linejoin="round"/>
+  <use href="#spark" fill="#FFF0A5" stroke="#F5F2FF" stroke-width="7" stroke-linejoin="round"/>
+  <circle cx="166" cy="704" r="12" fill="#EC62B7"/>
+  <circle cx="190" cy="786" r="15" fill="#56D5D0"/>
+  <circle cx="230" cy="856" r="10" fill="#9A8CFF"/>
 </svg>
