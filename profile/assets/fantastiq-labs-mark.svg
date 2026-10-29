@@ -1,20 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 176" role="img" aria-labelledby="title desc">
   <title id="title">Fantastiq Labs</title>
-  <desc id="desc">A violet and aqua spark beside the words Fantastiq Labs.</desc>
-  <defs>
-    <linearGradient id="spark" x1="22" y1="24" x2="148" y2="148" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#65E6D2"/>
-      <stop offset=".52" stop-color="#8A7BFF"/>
-      <stop offset="1" stop-color="#F58BCC"/>
-    </linearGradient>
-    <linearGradient id="word" x1="196" y1="24" x2="676" y2="142" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F4F2FF"/>
-      <stop offset="1" stop-color="#B8C5FF"/>
-    </linearGradient>
-  </defs>
-  <path d="M88 8 103 59 153 27 121 77 170 91 120 105 153 155 103 124 88 170 73 124 23 155 55 105 6 91 55 77 23 27 73 59 88 8Z" fill="url(#spark)"/>
-  <circle cx="88" cy="91" r="19" fill="#101426"/>
-  <circle cx="88" cy="91" r="7" fill="#F7F5FF"/>
-  <text x="202" y="91" fill="url(#word)" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="60" font-weight="750" letter-spacing="-2">FANTASTIQ</text>
-  <text x="207" y="137" fill="#A6B0D0" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="22" font-weight="650" letter-spacing="8">LABS</text>
+  <desc id="desc">A warm red spark with a bright chartreuse core beside the words Fantastiq Labs.</desc>
+  <rect width="760" height="176" rx="20" fill="#202321"/>
+  <path d="M88 8 103 59 153 27 121 77 170 91 120 105 153 155 103 124 88 170 73 124 23 155 55 105 6 91 55 77 23 27 73 59 88 8Z" fill="#D75236"/>
+  <circle cx="88" cy="91" r="21" fill="#202321" stroke="#D9F06A" stroke-width="5"/>
+  <circle cx="88" cy="91" r="7" fill="#D9F06A"/>
+  <text x="202" y="91" fill="#F0E8D8" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="60" font-weight="750" letter-spacing="-2">FANTASTIQ</text>
+  <text x="207" y="137" fill="#D9F06A" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="22" font-weight="650" letter-spacing="8">LABS</text>
 </svg>
