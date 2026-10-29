@@ -20,7 +20,11 @@ We build browser games, music and event tools, and practical software for creati
 ### Open source
 
 - [Logtastiq](https://github.com/fantastiqlabs/logtastiq) — Turn Warcraft Logs into clear next steps.
-- [Raid Bingo addon](https://github.com/fantastiqlabs/hellothereguild-raid-bingo-addon) — add a social bingo game to raid nights.
+- [Raid Bingo](https://github.com/fantastiqlabs/hellothereguild-raid-bingo-addon) — bring a social bingo game to raid nights.
+
+### In development
+
+- **Guildtastiq** — Everything your guild needs, in one place. The public release is in preparation.
 
 ## Build with us
 
