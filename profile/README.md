@@ -19,7 +19,7 @@ We build browser games, music and event tools, and practical software for creati
 
 ### Open source
 
-- [Hello There Logs](https://github.com/fantastiqlabs/hellotherelogs) — browse and compare World of Warcraft combat logs.
+- [Logtastiq](https://github.com/fantastiqlabs/logtastiq) — Turn Warcraft Logs into clear next steps.
 - [Raid Bingo addon](https://github.com/fantastiqlabs/hellothereguild-raid-bingo-addon) — add a social bingo game to raid nights.
 
 ## Build with us
