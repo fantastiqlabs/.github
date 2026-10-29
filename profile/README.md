@@ -10,7 +10,7 @@
 <p align="center">
   <a href="https://github.com/fantastiqlabs">Explore our repositories</a>
   &nbsp;·&nbsp;
-  <a href="https://doctastiq.fantastiq.net">Read the docs</a>
+  <a href="https://public.doctastiq.fantastiq.net">Read the public docs</a>
 </p>
 
 ## What we make
@@ -30,6 +30,6 @@ We build browser games, music and event tools, and practical software for creati
 
 We welcome clear bug reports, practical ideas, and focused contributions. Check a project's README before you open an issue. It explains the current scope and the best place to start.
 
-For project documentation, visit [Doctastiq](https://doctastiq.fantastiq.net). More projects are in development.
+For public project documentation, visit [Doctastiq](https://public.doctastiq.fantastiq.net). More projects are in development.
 
 <p align="center"><sub>Fantastiq Labs · Curious by design. Built with care.</sub></p>
