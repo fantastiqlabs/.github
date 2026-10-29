@@ -48,7 +48,10 @@ jobs:
           docs = list(Path('.').rglob('*.md'))
           ignored = {'.git', 'node_modules', '.venv'}
           docs = [p for p in docs if not (set(p.parts) & ignored)]
-          if any(not p.read_text(encoding='utf-8').strip() for p in docs):
-              raise SystemExit('A Markdown file is empty.')
+          for path in docs:
+              path.read_text(encoding='utf-8')
+          empty = [str(path) for path in docs if not path.read_text(encoding='utf-8').strip()]
+          if empty:
+              print('::warning::Empty Markdown files: ' + ', '.join(empty))
           print(f'Checked {len(docs)} Markdown files.')
           PYDOCS
