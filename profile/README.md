@@ -20,7 +20,7 @@ We build browser games, music and event tools, and practical software for creati
 ### Open source
 
 - [Logtastiq](https://github.com/fantastiqlabs/logtastiq) — Turn Warcraft Logs into clear next steps.
-- [Raid Bingo](https://github.com/fantastiqlabs/hellothereguild-raid-bingo-addon) — bring a social bingo game to raid nights.
+- [Fantastiq Bingo TBC](https://github.com/fantastiqlabs/fantastiq-bingo-tbc) — a raid bingo add-on for World of Warcraft: The Burning Crusade Classic Anniversary.
 
 ### In development
 
