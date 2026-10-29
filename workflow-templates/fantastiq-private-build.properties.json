@@ -1,0 +1,6 @@
+{
+  "name": "Fantastiq Labs Private Project CI",
+  "description": "Build and test with monthly hosted runner pacing and self-hosted fallback.",
+  "iconName": "octicon-workflow",
+  "categories": ["CI"]
+}

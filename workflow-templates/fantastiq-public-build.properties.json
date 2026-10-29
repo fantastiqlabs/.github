@@ -1,0 +1,6 @@
+{
+  "name": "Fantastiq Labs Public Project CI",
+  "description": "Build and test on GitHub-hosted runners for public repositories.",
+  "iconName": "octicon-workflow",
+  "categories": ["CI"]
+}
