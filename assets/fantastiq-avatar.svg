@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Fantastiq Labs</title>
+  <desc id="desc">A stylized F mark with a star, designed for GitHub profile avatar (1:1, transparent background).</desc>
+  <defs>
+    <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8B7CF7"/>
+      <stop offset="35%" stop-color="#74B5E8"/>
+      <stop offset="58%" stop-color="#54D5D0"/>
+      <stop offset="100%" stop-color="#EE61B8"/>
+    </linearGradient>
+    <path id="f-shape" d="M320 256h384a64 64 0 0 1 0 128H320v256h320a64 64 0 0 1 0 128H320v320a64 64 0 0 1-128 0V384a128 128 0 0 1 128-128Z"/>
+    <path id="star-shape" d="m768 224 32 96 96 32-96 32-32 96-32-96-96-32 96-32z"/>
+  </defs>
+  <use href="#f-shape" fill="url(#brandGradient)"/>
+  <use href="#star-shape" fill="#FFF0A5" stroke="#17203D" stroke-width="16" stroke-linejoin="round"/>
+</svg>
