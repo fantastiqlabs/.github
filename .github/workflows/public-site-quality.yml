@@ -1,0 +1,81 @@
+name: Public site quality
+
+on:
+  workflow_call:
+    inputs:
+      site_dir:
+        description: Directory containing the built static site
+        required: false
+        type: string
+        default: .
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the product repository
+        uses: actions/checkout@v4
+      - name: Check out the shared checks
+        uses: actions/checkout@v4
+        with:
+          repository: fantastiqlabs/.github
+          ref: main
+          path: .fantastiq-quality
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser audit tools
+        run: |
+          npm install --prefix "$RUNNER_TEMP/fantastiq-quality" --no-package-lock --no-save playwright @axe-core/playwright
+          "$RUNNER_TEMP/fantastiq-quality/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Check local HTML links and prepare page list
+        id: links
+        continue-on-error: true
+        env:
+          SITE_DIR: ${{ inputs.site_dir }}
+        run: |
+          mkdir -p quality-report
+          python3 .fantastiq-quality/scripts/check_local_html.py \
+            --root "$SITE_DIR" \
+            --report quality-report/local-links.json \
+            --pages quality-report/pages.txt
+      - name: Start static site
+        if: steps.links.outcome == 'success'
+        env:
+          SITE_DIR: ${{ inputs.site_dir }}
+        run: |
+          site_dir="$(realpath "$SITE_DIR")"
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory "$site_dir" \
+            > "$RUNNER_TEMP/fantastiq-site-server.log" 2>&1 &
+          echo "$!" > "$RUNNER_TEMP/fantastiq-site-server.pid"
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8765/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat "$RUNNER_TEMP/fantastiq-site-server.log"
+          exit 1
+      - name: Run axe WCAG 2.1 AA scan
+        if: steps.links.outcome == 'success'
+        continue-on-error: true
+        env:
+          AXE_MODULES: ${{ runner.temp }}/fantastiq-quality/node_modules
+        run: |
+          node .fantastiq-quality/scripts/scan_accessibility.cjs \
+            --base-url http://127.0.0.1:8765 \
+            --pages quality-report/pages.txt \
+            --report quality-report/accessibility.json
+      - name: Upload quality reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-site-quality-${{ github.run_id }}
+          path: quality-report/
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Fail on broken local links
+        if: always() && steps.links.outcome == 'failure'
+        run: exit 1
